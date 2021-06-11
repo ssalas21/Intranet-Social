@@ -1,0 +1,1657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DD8409C-D8E6-48E8-9159-01989613D7FC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dideco</RootNamespace>
+    <AssemblyName>Dideco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Chart.Mvc, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chart.Mvc.1.0.0.2\lib\net45\Chart.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.87.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.87.1\lib\net40\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\Usuario\Documents\081_hello_pdf_src\081_hello_pdf_src\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrador\EstadisticasFecha.aspx" />
+    <Content Include="Alcalde\AtenderAudiencia.aspx" />
+    <Content Include="Alcalde\css\sb-admin.css" />
+    <Content Include="Alcalde\css\sb-admin.min.css" />
+    <Content Include="Alcalde\EstadoAudiencia.aspx" />
+    <Content Include="Alcalde\gulpfile.js" />
+    <Content Include="Alcalde\Index.aspx" />
+    <Content Include="Alcalde\js\Chart.min.js" />
+    <Content Include="Alcalde\js\sb-admin.js" />
+    <Content Include="Alcalde\js\sb-admin.min.js" />
+    <Content Include="Alcalde\script.js" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Alcalde\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Alcalde\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Alcalde\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Alcalde\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Alcalde\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Alcalde\vendor\chart.js\Chart.js" />
+    <Content Include="Alcalde\vendor\chart.js\Chart.min.js" />
+    <Content Include="Alcalde\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Alcalde\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Alcalde\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Alcalde\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Alcalde\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Alcalde\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Alcalde\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Alcalde\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Alcalde\vendor\jquery\jquery.js" />
+    <Content Include="Alcalde\vendor\jquery\jquery.min.js" />
+    <Content Include="Alcalde\vendor\popper\popper.js" />
+    <Content Include="Alcalde\vendor\popper\popper.min.js" />
+    <Content Include="Ambiente\css\sb-admin.css" />
+    <Content Include="Ambiente\css\sb-admin.min.css" />
+    <Content Include="Ambiente\gulpfile.js" />
+    <Content Include="Ambiente\Index.aspx" />
+    <Content Include="Ambiente\js\sb-admin.js" />
+    <Content Include="Ambiente\js\sb-admin.min.js" />
+    <Content Include="Ambiente\SolicitudesAlcaldia.aspx" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Ambiente\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Ambiente\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Ambiente\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Ambiente\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Ambiente\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Ambiente\vendor\chart.js\Chart.js" />
+    <Content Include="Ambiente\vendor\chart.js\Chart.min.js" />
+    <Content Include="Ambiente\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Ambiente\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Ambiente\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Ambiente\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Ambiente\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Ambiente\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Ambiente\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Ambiente\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Ambiente\vendor\jquery\jquery.js" />
+    <Content Include="Ambiente\vendor\jquery\jquery.min.js" />
+    <Content Include="Ambiente\vendor\popper\popper.js" />
+    <Content Include="Ambiente\vendor\popper\popper.min.js" />
+    <Content Include="Asistente\Index.aspx" />
+    <Content Include="Asistente\css\sb-admin.css" />
+    <Content Include="Asistente\css\sb-admin.min.css" />
+    <Content Include="Asistente\SolicitudesPendientesAsistente.aspx" />
+    <Content Include="Asistente\SolicitudesPorRutAsistente.aspx" />
+    <Content Include="DirectorAreaOperativa\AgregarContrato.aspx" />
+    <Content Include="DirectorAreaOperativa\AgregarSeguroComplementario.aspx" />
+    <Content Include="DirectorAreaOperativa\BuscarContrato.aspx" />
+    <Content Include="DirectorAreaOperativa\Contratos.aspx" />
+    <Content Include="DirectorAreaOperativa\ContratosExpirando.aspx" />
+    <Content Include="DirectorAreaOperativa\ContratosVigentes.aspx" />
+    <Content Include="DirectorAreaOperativa\css\sb-admin.css" />
+    <Content Include="DirectorAreaOperativa\css\sb-admin.min.css" />
+    <Content Include="DirectorAreaOperativa\gulpfile.js" />
+    <Content Include="DirectorAreaOperativa\Index.aspx" />
+    <Content Include="DirectorAreaOperativa\js\sb-admin.js" />
+    <Content Include="DirectorAreaOperativa\js\sb-admin.min.js" />
+    <Content Include="DirectorAreaOperativa\Mantencion.aspx" />
+    <Content Include="DirectorAreaOperativa\ModificarContrato.aspx" />
+    <Content Include="DirectorAreaOperativa\SegurosComplementariosMenu.aspx" />
+    <Content Include="DirectorAreaOperativa\SegurosComplementariosVenciendo.aspx" />
+    <Content Include="DirectorAreaOperativa\SolicitudesAlcaldia.aspx" />
+    <Content Include="DirectorAreaOperativa\Vehiculos.aspx" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="DirectorAreaOperativa\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="DirectorAreaOperativa\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="DirectorAreaOperativa\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="DirectorAreaOperativa\vendor\chart.js\Chart.js" />
+    <Content Include="DirectorAreaOperativa\vendor\chart.js\Chart.min.js" />
+    <Content Include="DirectorAreaOperativa\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="DirectorAreaOperativa\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="DirectorAreaOperativa\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="DirectorAreaOperativa\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="DirectorAreaOperativa\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="DirectorAreaOperativa\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="DirectorAreaOperativa\vendor\jquery\jquery.js" />
+    <Content Include="DirectorAreaOperativa\vendor\jquery\jquery.min.js" />
+    <Content Include="DirectorAreaOperativa\vendor\popper\popper.js" />
+    <Content Include="DirectorAreaOperativa\vendor\popper\popper.min.js" />
+    <Content Include="DirectorAreaOperativa\VerSegurosVigentes.aspx" />
+    <Content Include="DirectorObras\css\sb-admin.css" />
+    <Content Include="DirectorObras\css\sb-admin.min.css" />
+    <Content Include="DirectorObras\gulpfile.js" />
+    <Content Include="DirectorObras\Index.aspx" />
+    <Content Include="DirectorObras\js\sb-admin.js" />
+    <Content Include="DirectorObras\js\sb-admin.min.js" />
+    <Content Include="DirectorObras\SolicitudesAlcaldia.aspx" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="DirectorObras\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="DirectorObras\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="DirectorObras\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="DirectorObras\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="DirectorObras\vendor\chart.js\Chart.js" />
+    <Content Include="DirectorObras\vendor\chart.js\Chart.min.js" />
+    <Content Include="DirectorObras\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="DirectorObras\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="DirectorObras\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="DirectorObras\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="DirectorObras\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="DirectorObras\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="DirectorObras\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="DirectorObras\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="DirectorObras\vendor\jquery\jquery.js" />
+    <Content Include="DirectorObras\vendor\jquery\jquery.min.js" />
+    <Content Include="DirectorObras\vendor\popper\popper.js" />
+    <Content Include="DirectorObras\vendor\popper\popper.min.js" />
+    <Content Include="DirectorSecplan\css\sb-admin.css" />
+    <Content Include="DirectorSecplan\css\sb-admin.min.css" />
+    <Content Include="DirectorSecplan\gulpfile.js" />
+    <Content Include="DirectorSecplan\Index.aspx" />
+    <Content Include="DirectorSecplan\js\sb-admin.js" />
+    <Content Include="DirectorSecplan\js\sb-admin.min.js" />
+    <Content Include="DirectorSecplan\SolicitudesAlcaldia.aspx" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="DirectorSecplan\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="DirectorSecplan\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="DirectorSecplan\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="DirectorSecplan\vendor\chart.js\Chart.js" />
+    <Content Include="DirectorSecplan\vendor\chart.js\Chart.min.js" />
+    <Content Include="DirectorSecplan\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="DirectorSecplan\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="DirectorSecplan\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="DirectorSecplan\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="DirectorSecplan\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="DirectorSecplan\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="DirectorSecplan\vendor\jquery\jquery.js" />
+    <Content Include="DirectorSecplan\vendor\jquery\jquery.min.js" />
+    <Content Include="DirectorSecplan\vendor\popper\popper.js" />
+    <Content Include="DirectorSecplan\vendor\popper\popper.min.js" />
+    <Content Include="DirectorTransito\css\sb-admin.css" />
+    <Content Include="DirectorTransito\css\sb-admin.min.css" />
+    <Content Include="DirectorTransito\gulpfile.js" />
+    <Content Include="DirectorTransito\Index.aspx" />
+    <Content Include="DirectorTransito\js\sb-admin.js" />
+    <Content Include="DirectorTransito\js\sb-admin.min.js" />
+    <Content Include="DirectorTransito\SolicitudesAlcaldia.aspx" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="DirectorTransito\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="DirectorTransito\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="DirectorTransito\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="DirectorTransito\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="DirectorTransito\vendor\chart.js\Chart.js" />
+    <Content Include="DirectorTransito\vendor\chart.js\Chart.min.js" />
+    <Content Include="DirectorTransito\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="DirectorTransito\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="DirectorTransito\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="DirectorTransito\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="DirectorTransito\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="DirectorTransito\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="DirectorTransito\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="DirectorTransito\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="DirectorTransito\vendor\jquery\jquery.js" />
+    <Content Include="DirectorTransito\vendor\jquery\jquery.min.js" />
+    <Content Include="DirectorTransito\vendor\popper\popper.js" />
+    <Content Include="DirectorTransito\vendor\popper\popper.min.js" />
+    <Content Include="Director\css\sb-admin.css" />
+    <Content Include="Director\css\sb-admin.min.css" />
+    <Content Include="Director\Estadisticas.aspx" />
+    <Content Include="Director\EstadisticasFecha.aspx" />
+    <Content Include="Director\EstadisticasLocalidad.aspx" />
+    <Content Include="Administrador\EstadisticasMotivo.aspx" />
+    <Content Include="Administrador\GestionarAsistentes.aspx" />
+    <Content Include="Administrador\GestionarDirectores.aspx" />
+    <Content Include="Administrador\GestionarSecretarias.aspx" />
+    <Content Include="Asistente\SolicitudesPorRut.aspx" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\jquery-3.1.1.js" />
+    <Content Include="bootstrap\js\npm.js" />
+    <Content Include="Director\EstadisticasMotivo.aspx" />
+    <Content Include="Director\EstadisticasRangoEtario.aspx" />
+    <Content Include="Director\gulpfile.js" />
+    <Content Include="Director\Index.aspx" />
+    <Content Include="Director\js\sb-admin.js" />
+    <Content Include="Director\js\sb-admin.min.js" />
+    <Content Include="Director\SolicitudesAlcaldia.aspx" />
+    <Content Include="Director\SolicitudesPendientesAsistentes.aspx" />
+    <Content Include="Director\SolicitudesPendientesDirector.aspx" />
+    <Content Include="Director\SolicitudesPorBeneficiario.aspx" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Director\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Director\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Director\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Director\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Director\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Director\vendor\chart.js\Chart.js" />
+    <Content Include="Director\vendor\chart.js\Chart.min.js" />
+    <Content Include="Director\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Director\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Director\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Director\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Director\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Director\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Director\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Director\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Director\vendor\jquery\jquery.js" />
+    <Content Include="Director\vendor\jquery\jquery.min.js" />
+    <Content Include="Director\vendor\popper\popper.js" />
+    <Content Include="Director\vendor\popper\popper.min.js" />
+    <Content Include="Educacion\css\sb-admin.css" />
+    <Content Include="Educacion\css\sb-admin.min.css" />
+    <Content Include="Educacion\gulpfile.js" />
+    <Content Include="Educacion\Index.aspx" />
+    <Content Include="Educacion\js\sb-admin.js" />
+    <Content Include="Educacion\js\sb-admin.min.js" />
+    <Content Include="Educacion\SolicitudesAlcaldia.aspx" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Educacion\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Educacion\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Educacion\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Educacion\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Educacion\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Educacion\vendor\chart.js\Chart.js" />
+    <Content Include="Educacion\vendor\chart.js\Chart.min.js" />
+    <Content Include="Educacion\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Educacion\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Educacion\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Educacion\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Educacion\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Educacion\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Educacion\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Educacion\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Educacion\vendor\jquery\jquery.js" />
+    <Content Include="Educacion\vendor\jquery\jquery.min.js" />
+    <Content Include="Educacion\vendor\popper\popper.js" />
+    <Content Include="Educacion\vendor\popper\popper.min.js" />
+    <Content Include="error.aspx" />
+    <Content Include="favicon\android-icon-144x144.png" />
+    <Content Include="favicon\android-icon-192x192.png" />
+    <Content Include="favicon\android-icon-36x36.png" />
+    <Content Include="favicon\android-icon-48x48.png" />
+    <Content Include="favicon\android-icon-72x72.png" />
+    <Content Include="favicon\android-icon-96x96.png" />
+    <Content Include="favicon\apple-icon-114x114.png" />
+    <Content Include="favicon\apple-icon-120x120.png" />
+    <Content Include="favicon\apple-icon-144x144.png" />
+    <Content Include="favicon\apple-icon-152x152.png" />
+    <Content Include="favicon\apple-icon-180x180.png" />
+    <Content Include="favicon\apple-icon-57x57.png" />
+    <Content Include="favicon\apple-icon-60x60.png" />
+    <Content Include="favicon\apple-icon-72x72.png" />
+    <Content Include="favicon\apple-icon-76x76.png" />
+    <Content Include="favicon\apple-icon-precomposed.png" />
+    <Content Include="favicon\apple-icon.png" />
+    <Content Include="favicon\browserconfig.xml" />
+    <Content Include="favicon\favicon-16x16.png" />
+    <Content Include="favicon\favicon-32x32.png" />
+    <Content Include="favicon\favicon-96x96.png" />
+    <Content Include="favicon\favicon.ico" />
+    <Content Include="favicon\ms-icon-144x144.png" />
+    <Content Include="favicon\ms-icon-150x150.png" />
+    <Content Include="favicon\ms-icon-310x310.png" />
+    <Content Include="favicon\ms-icon-70x70.png" />
+    <Content Include="Asistente\gulpfile.js" />
+    <Content Include="Finanzas\css\sb-admin.css" />
+    <Content Include="Finanzas\css\sb-admin.min.css" />
+    <Content Include="Finanzas\gulpfile.js" />
+    <Content Include="Finanzas\Index.aspx" />
+    <Content Include="Finanzas\js\sb-admin.js" />
+    <Content Include="Finanzas\js\sb-admin.min.js" />
+    <Content Include="Finanzas\SolicitudesAlcaldia.aspx" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Finanzas\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Finanzas\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Finanzas\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Finanzas\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Finanzas\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Finanzas\vendor\chart.js\Chart.js" />
+    <Content Include="Finanzas\vendor\chart.js\Chart.min.js" />
+    <Content Include="Finanzas\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Finanzas\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Finanzas\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Finanzas\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Finanzas\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Finanzas\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Finanzas\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Finanzas\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Finanzas\vendor\jquery\jquery.js" />
+    <Content Include="Finanzas\vendor\jquery\jquery.min.js" />
+    <Content Include="Finanzas\vendor\popper\popper.js" />
+    <Content Include="Finanzas\vendor\popper\popper.min.js" />
+    <Content Include="img\Pie2.jpg" />
+    <Content Include="img\Encabezado2.jpg" />
+    <Content Include="img\Encabezado.jpg" />
+    <Content Include="img\escudo.gif" />
+    <Content Include="img\PDF.jpg" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\Pie.jpg" />
+    <Content Include="Asistente\js\sb-admin.js" />
+    <Content Include="Asistente\js\sb-admin.min.js" />
+    <Content Include="img\elegir.png" />
+    <Content Include="Informatica\css\sb-admin.css" />
+    <Content Include="Informatica\css\sb-admin.min.css" />
+    <Content Include="Informatica\gulpfile.js" />
+    <Content Include="Informatica\Index.aspx" />
+    <Content Include="Informatica\js\sb-admin.js" />
+    <Content Include="Informatica\js\sb-admin.min.js" />
+    <Content Include="Informatica\SolicitudesAlcaldia.aspx" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Informatica\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Informatica\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Informatica\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Informatica\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Informatica\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Informatica\vendor\chart.js\Chart.js" />
+    <Content Include="Informatica\vendor\chart.js\Chart.min.js" />
+    <Content Include="Informatica\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Informatica\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Informatica\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Informatica\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Informatica\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Informatica\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Informatica\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Informatica\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Informatica\vendor\jquery\jquery.js" />
+    <Content Include="Informatica\vendor\jquery\jquery.min.js" />
+    <Content Include="Informatica\vendor\popper\popper.js" />
+    <Content Include="Informatica\vendor\popper\popper.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Administrador\Index.aspx" />
+    <Content Include="Reportes\Index.aspx" />
+    <Content Include="Reportes\SolicitudesBeneficiario.aspx" />
+    <Content Include="Reportes\SolicitudesFecha.aspx" />
+    <Content Include="RRPP\Index.aspx" />
+    <Content Include="RRPP\SolicitudesAlcaldia.aspx" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="SecreAlcaldia\AgregarAudiencia.aspx" />
+    <Content Include="SecreAlcaldia\AsignarAudiencias.aspx" />
+    <Content Include="SecreAlcaldia\css\sb-admin.css" />
+    <Content Include="SecreAlcaldia\css\sb-admin.min.css" />
+    <Content Include="SecreAlcaldia\gulpfile.js" />
+    <Content Include="SecreAlcaldia\Index.aspx" />
+    <Content Include="SecreAlcaldia\Index2.aspx" />
+    <Content Include="SecreAlcaldia\js\sb-admin.js" />
+    <Content Include="SecreAlcaldia\js\sb-admin.min.js" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="SecreAlcaldia\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="SecreAlcaldia\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="SecreAlcaldia\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="SecreAlcaldia\vendor\chart.js\Chart.js" />
+    <Content Include="SecreAlcaldia\vendor\chart.js\Chart.min.js" />
+    <Content Include="SecreAlcaldia\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="SecreAlcaldia\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="SecreAlcaldia\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="SecreAlcaldia\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="SecreAlcaldia\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="SecreAlcaldia\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="SecreAlcaldia\vendor\jquery\jquery.js" />
+    <Content Include="SecreAlcaldia\vendor\jquery\jquery.min.js" />
+    <Content Include="SecreAlcaldia\vendor\popper\popper.js" />
+    <Content Include="SecreAlcaldia\vendor\popper\popper.min.js" />
+    <Content Include="Secretaria\Index.aspx" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Asistente\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Asistente\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Asistente\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Asistente\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Asistente\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Asistente\vendor\chart.js\Chart.js" />
+    <Content Include="Asistente\vendor\chart.js\Chart.min.js" />
+    <Content Include="Asistente\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Asistente\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Asistente\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Asistente\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Asistente\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Asistente\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Asistente\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Asistente\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Asistente\vendor\jquery\jquery.js" />
+    <Content Include="Asistente\vendor\jquery\jquery.min.js" />
+    <Content Include="Asistente\vendor\popper\popper.js" />
+    <Content Include="Asistente\vendor\popper\popper.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\EstadisticasFecha.aspx.cs">
+      <DependentUpon>EstadisticasFecha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\EstadisticasFecha.aspx.designer.cs">
+      <DependentUpon>EstadisticasFecha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alcalde\AtenderAudiencia.aspx.cs">
+      <DependentUpon>AtenderAudiencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alcalde\AtenderAudiencia.aspx.designer.cs">
+      <DependentUpon>AtenderAudiencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alcalde\EstadoAudiencia.aspx.cs">
+      <DependentUpon>EstadoAudiencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alcalde\EstadoAudiencia.aspx.designer.cs">
+      <DependentUpon>EstadoAudiencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alcalde\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alcalde\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ambiente\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ambiente\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ambiente\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ambiente\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asistente\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asistente\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPendientesAsistente.aspx.cs">
+      <DependentUpon>SolicitudesPendientesAsistente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPendientesAsistente.aspx.designer.cs">
+      <DependentUpon>SolicitudesPendientesAsistente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPorRutAsistente.aspx.cs">
+      <DependentUpon>SolicitudesPorRutAsistente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPorRutAsistente.aspx.designer.cs">
+      <DependentUpon>SolicitudesPorRutAsistente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AudienciasBLL.cs" />
+    <Compile Include="BLL\ContratosOperativaBLL.cs" />
+    <Compile Include="BLL\GastosContratosBLL.cs" />
+    <Compile Include="BLL\MantencionesBLL.cs" />
+    <Compile Include="BLL\SegurosComplementariosBLL.cs" />
+    <Compile Include="BLL\UsoVehiculosBLL.cs" />
+    <Compile Include="BLL\VehiculosBLL.cs" />
+    <Compile Include="DirectorAreaOperativa\AgregarContrato.aspx.cs">
+      <DependentUpon>AgregarContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\AgregarContrato.aspx.designer.cs">
+      <DependentUpon>AgregarContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\AgregarSeguroComplementario.aspx.cs">
+      <DependentUpon>AgregarSeguroComplementario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\AgregarSeguroComplementario.aspx.designer.cs">
+      <DependentUpon>AgregarSeguroComplementario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\BuscarContrato.aspx.cs">
+      <DependentUpon>BuscarContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\BuscarContrato.aspx.designer.cs">
+      <DependentUpon>BuscarContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Contratos.aspx.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Contratos.aspx.designer.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ContratosExpirando.aspx.cs">
+      <DependentUpon>ContratosExpirando.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ContratosExpirando.aspx.designer.cs">
+      <DependentUpon>ContratosExpirando.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ContratosVigentes.aspx.cs">
+      <DependentUpon>ContratosVigentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ContratosVigentes.aspx.designer.cs">
+      <DependentUpon>ContratosVigentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Mantencion.aspx.cs">
+      <DependentUpon>Mantencion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Mantencion.aspx.designer.cs">
+      <DependentUpon>Mantencion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ModificarContrato.aspx.cs">
+      <DependentUpon>ModificarContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\ModificarContrato.aspx.designer.cs">
+      <DependentUpon>ModificarContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SegurosComplementariosMenu.aspx.cs">
+      <DependentUpon>SegurosComplementariosMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SegurosComplementariosMenu.aspx.designer.cs">
+      <DependentUpon>SegurosComplementariosMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SegurosComplementariosVenciendo.aspx.cs">
+      <DependentUpon>SegurosComplementariosVenciendo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SegurosComplementariosVenciendo.aspx.designer.cs">
+      <DependentUpon>SegurosComplementariosVenciendo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Vehiculos.aspx.cs">
+      <DependentUpon>Vehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\Vehiculos.aspx.designer.cs">
+      <DependentUpon>Vehiculos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\VerSegurosVigentes.aspx.cs">
+      <DependentUpon>VerSegurosVigentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorAreaOperativa\VerSegurosVigentes.aspx.designer.cs">
+      <DependentUpon>VerSegurosVigentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorObras\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorObras\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorObras\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorObras\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorSecplan\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorSecplan\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorSecplan\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorSecplan\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorTransito\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorTransito\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorTransito\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectorTransito\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\Estadisticas.aspx.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\Estadisticas.aspx.designer.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\EstadisticasFecha.aspx.cs">
+      <DependentUpon>EstadisticasFecha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\EstadisticasFecha.aspx.designer.cs">
+      <DependentUpon>EstadisticasFecha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\EstadisticasLocalidad.aspx.cs">
+      <DependentUpon>EstadisticasLocalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\EstadisticasLocalidad.aspx.designer.cs">
+      <DependentUpon>EstadisticasLocalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\EstadisticasMotivo.aspx.cs">
+      <DependentUpon>EstadisticasMotivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\EstadisticasMotivo.aspx.designer.cs">
+      <DependentUpon>EstadisticasMotivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GestionarAsistentes.aspx.cs">
+      <DependentUpon>GestionarAsistentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GestionarAsistentes.aspx.designer.cs">
+      <DependentUpon>GestionarAsistentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GestionarDirectores.aspx.cs">
+      <DependentUpon>GestionarDirectores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GestionarDirectores.aspx.designer.cs">
+      <DependentUpon>GestionarDirectores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\GestionarSecretarias.aspx.cs">
+      <DependentUpon>GestionarSecretarias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\GestionarSecretarias.aspx.designer.cs">
+      <DependentUpon>GestionarSecretarias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPorRut.aspx.cs">
+      <DependentUpon>SolicitudesPorRut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asistente\SolicitudesPorRut.aspx.designer.cs">
+      <DependentUpon>SolicitudesPorRut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BDDidecoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDDidecoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BeneficiarioBLL.cs" />
+    <Compile Include="BLL\EstadisticasBLL.cs" />
+    <Compile Include="BLL\PersonalBLL.cs" />
+    <Compile Include="BLL\SolicitudesBLL.cs" />
+    <Compile Include="Director\EstadisticasMotivo.aspx.cs">
+      <DependentUpon>EstadisticasMotivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\EstadisticasMotivo.aspx.designer.cs">
+      <DependentUpon>EstadisticasMotivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\EstadisticasRangoEtario.aspx.cs">
+      <DependentUpon>EstadisticasRangoEtario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\EstadisticasRangoEtario.aspx.designer.cs">
+      <DependentUpon>EstadisticasRangoEtario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\SolicitudesPendientesAsistentes.aspx.cs">
+      <DependentUpon>SolicitudesPendientesAsistentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\SolicitudesPendientesAsistentes.aspx.designer.cs">
+      <DependentUpon>SolicitudesPendientesAsistentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\SolicitudesPendientesDirector.aspx.cs">
+      <DependentUpon>SolicitudesPendientesDirector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\SolicitudesPendientesDirector.aspx.designer.cs">
+      <DependentUpon>SolicitudesPendientesDirector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director\SolicitudesPorBeneficiario.aspx.cs">
+      <DependentUpon>SolicitudesPorBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director\SolicitudesPorBeneficiario.aspx.designer.cs">
+      <DependentUpon>SolicitudesPorBeneficiario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Archivo.cs" />
+    <Compile Include="Entity\ContratosView.cs" />
+    <Compile Include="Entity\Estadistica.cs" />
+    <Compile Include="Entity\Estadistica2.cs" />
+    <Compile Include="Entity\EstadisticaMotivo.cs" />
+    <Compile Include="Entity\SolicitudesTotalidad.cs" />
+    <Compile Include="Entity\VehiculoMantencion.cs" />
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finanzas\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finanzas\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informatica\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informatica\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informatica\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informatica\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestro.Master.cs">
+      <DependentUpon>Maestro.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestro.Master.designer.cs">
+      <DependentUpon>Maestro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Administrador\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\SolicitudesBeneficiario.aspx.cs">
+      <DependentUpon>SolicitudesBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\SolicitudesBeneficiario.aspx.designer.cs">
+      <DependentUpon>SolicitudesBeneficiario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\SolicitudesFecha.aspx.cs">
+      <DependentUpon>SolicitudesFecha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\SolicitudesFecha.aspx.designer.cs">
+      <DependentUpon>SolicitudesFecha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RP.cs" />
+    <Compile Include="RRPP\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRPP\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRPP\SolicitudesAlcaldia.aspx.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRPP\SolicitudesAlcaldia.aspx.designer.cs">
+      <DependentUpon>SolicitudesAlcaldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecreAlcaldia\AgregarAudiencia.aspx.cs">
+      <DependentUpon>AgregarAudiencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecreAlcaldia\AgregarAudiencia.aspx.designer.cs">
+      <DependentUpon>AgregarAudiencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecreAlcaldia\AsignarAudiencias.aspx.cs">
+      <DependentUpon>AsignarAudiencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecreAlcaldia\AsignarAudiencias.aspx.designer.cs">
+      <DependentUpon>AsignarAudiencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecreAlcaldia\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecreAlcaldia\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecreAlcaldia\Index2.aspx.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecreAlcaldia\Index2.aspx.designer.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secretaria\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secretaria\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Site1.Master" />
+    <EntityDeploy Include="BDDidecoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDDidecoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BDDidecoModel.edmx.diagram">
+      <DependentUpon>BDDidecoModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="favicon\manifest.json" />
+    <Content Include=".gitignore" />
+    <Content Include=".travis.yml" />
+    <Content Include="LICENSE" />
+    <Content Include="package.json" />
+    <Content Include="Maestro.Master" />
+    <Content Include="Director\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Director\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Director\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Director\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Director\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Director\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Director\vendor\font-awesome\less\animated.less" />
+    <Content Include="Director\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Director\vendor\font-awesome\less\core.less" />
+    <Content Include="Director\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Director\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Director\vendor\font-awesome\less\icons.less" />
+    <Content Include="Director\vendor\font-awesome\less\larger.less" />
+    <Content Include="Director\vendor\font-awesome\less\list.less" />
+    <Content Include="Director\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Director\vendor\font-awesome\less\path.less" />
+    <Content Include="Director\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Director\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Director\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Director\vendor\font-awesome\less\variables.less" />
+    <Content Include="Director\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Director\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Director\scss\_cards.scss" />
+    <Content Include="Director\scss\_global.scss" />
+    <Content Include="Director\scss\_mixins.scss" />
+    <Content Include="Director\scss\_navbar.scss" />
+    <Content Include="Director\scss\_navbar_fixed.scss" />
+    <Content Include="Director\scss\_navbar_static.scss" />
+    <Content Include="Director\scss\_navbar_toggle.scss" />
+    <Content Include="Director\scss\_utilities.scss" />
+    <Content Include="Director\scss\_variables.scss" />
+    <Content Include="Director\scss\sb-admin.scss" />
+    <Content Include="Alcalde\scss\_cards.scss" />
+    <Content Include="Alcalde\scss\_global.scss" />
+    <Content Include="Alcalde\scss\_mixins.scss" />
+    <Content Include="Alcalde\scss\_navbar.scss" />
+    <Content Include="Alcalde\scss\_navbar_fixed.scss" />
+    <Content Include="Alcalde\scss\_navbar_static.scss" />
+    <Content Include="Alcalde\scss\_navbar_toggle.scss" />
+    <Content Include="Alcalde\scss\_utilities.scss" />
+    <Content Include="Alcalde\scss\_variables.scss" />
+    <Content Include="Alcalde\scss\sb-admin.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Alcalde\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Alcalde\vendor\font-awesome\less\animated.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\core.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\icons.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\larger.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\list.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\path.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Alcalde\vendor\font-awesome\less\variables.less" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Alcalde\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Ambiente\scss\_cards.scss" />
+    <Content Include="Ambiente\scss\_global.scss" />
+    <Content Include="Ambiente\scss\_mixins.scss" />
+    <Content Include="Ambiente\scss\_navbar.scss" />
+    <Content Include="Ambiente\scss\_navbar_fixed.scss" />
+    <Content Include="Ambiente\scss\_navbar_static.scss" />
+    <Content Include="Ambiente\scss\_navbar_toggle.scss" />
+    <Content Include="Ambiente\scss\_utilities.scss" />
+    <Content Include="Ambiente\scss\_variables.scss" />
+    <Content Include="Ambiente\scss\sb-admin.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Ambiente\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Ambiente\vendor\font-awesome\less\animated.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\core.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\icons.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\larger.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\list.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\path.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Ambiente\vendor\font-awesome\less\variables.less" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Ambiente\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_cards.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_global.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_mixins.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_navbar.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_navbar_fixed.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_navbar_static.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_navbar_toggle.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_utilities.scss" />
+    <Content Include="DirectorAreaOperativa\scss\_variables.scss" />
+    <Content Include="DirectorAreaOperativa\scss\sb-admin.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\animated.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\core.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\icons.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\larger.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\list.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\mixins.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\path.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\stacked.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\less\variables.less" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="DirectorAreaOperativa\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="DirectorObras\scss\_cards.scss" />
+    <Content Include="DirectorObras\scss\_global.scss" />
+    <Content Include="DirectorObras\scss\_mixins.scss" />
+    <Content Include="DirectorObras\scss\_navbar.scss" />
+    <Content Include="DirectorObras\scss\_navbar_fixed.scss" />
+    <Content Include="DirectorObras\scss\_navbar_static.scss" />
+    <Content Include="DirectorObras\scss\_navbar_toggle.scss" />
+    <Content Include="DirectorObras\scss\_utilities.scss" />
+    <Content Include="DirectorObras\scss\_variables.scss" />
+    <Content Include="DirectorObras\scss\sb-admin.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="DirectorObras\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\animated.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\core.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\icons.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\larger.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\list.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\mixins.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\path.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\stacked.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\less\variables.less" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="DirectorObras\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="DirectorSecplan\scss\_cards.scss" />
+    <Content Include="DirectorSecplan\scss\_global.scss" />
+    <Content Include="DirectorSecplan\scss\_mixins.scss" />
+    <Content Include="DirectorSecplan\scss\_navbar.scss" />
+    <Content Include="DirectorSecplan\scss\_navbar_fixed.scss" />
+    <Content Include="DirectorSecplan\scss\_navbar_static.scss" />
+    <Content Include="DirectorSecplan\scss\_navbar_toggle.scss" />
+    <Content Include="DirectorSecplan\scss\_utilities.scss" />
+    <Content Include="DirectorSecplan\scss\_variables.scss" />
+    <Content Include="DirectorSecplan\scss\sb-admin.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\animated.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\core.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\icons.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\larger.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\list.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\mixins.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\path.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\stacked.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\less\variables.less" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="DirectorSecplan\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="DirectorTransito\scss\_cards.scss" />
+    <Content Include="DirectorTransito\scss\_global.scss" />
+    <Content Include="DirectorTransito\scss\_mixins.scss" />
+    <Content Include="DirectorTransito\scss\_navbar.scss" />
+    <Content Include="DirectorTransito\scss\_navbar_fixed.scss" />
+    <Content Include="DirectorTransito\scss\_navbar_static.scss" />
+    <Content Include="DirectorTransito\scss\_navbar_toggle.scss" />
+    <Content Include="DirectorTransito\scss\_utilities.scss" />
+    <Content Include="DirectorTransito\scss\_variables.scss" />
+    <Content Include="DirectorTransito\scss\sb-admin.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="DirectorTransito\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\animated.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\core.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\icons.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\larger.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\list.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\mixins.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\path.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\stacked.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\less\variables.less" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="DirectorTransito\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Educacion\scss\_cards.scss" />
+    <Content Include="Educacion\scss\_global.scss" />
+    <Content Include="Educacion\scss\_mixins.scss" />
+    <Content Include="Educacion\scss\_navbar.scss" />
+    <Content Include="Educacion\scss\_navbar_fixed.scss" />
+    <Content Include="Educacion\scss\_navbar_static.scss" />
+    <Content Include="Educacion\scss\_navbar_toggle.scss" />
+    <Content Include="Educacion\scss\_utilities.scss" />
+    <Content Include="Educacion\scss\_variables.scss" />
+    <Content Include="Educacion\scss\sb-admin.scss" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Educacion\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Educacion\vendor\font-awesome\less\animated.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\core.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\icons.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\larger.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\list.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\path.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Educacion\vendor\font-awesome\less\variables.less" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Educacion\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Finanzas\scss\_cards.scss" />
+    <Content Include="Finanzas\scss\_global.scss" />
+    <Content Include="Finanzas\scss\_mixins.scss" />
+    <Content Include="Finanzas\scss\_navbar.scss" />
+    <Content Include="Finanzas\scss\_navbar_fixed.scss" />
+    <Content Include="Finanzas\scss\_navbar_static.scss" />
+    <Content Include="Finanzas\scss\_navbar_toggle.scss" />
+    <Content Include="Finanzas\scss\_utilities.scss" />
+    <Content Include="Finanzas\scss\_variables.scss" />
+    <Content Include="Finanzas\scss\sb-admin.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Finanzas\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Finanzas\vendor\font-awesome\less\animated.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\core.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\icons.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\larger.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\list.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\path.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Finanzas\vendor\font-awesome\less\variables.less" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Finanzas\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Informatica\scss\_cards.scss" />
+    <Content Include="Informatica\scss\_global.scss" />
+    <Content Include="Informatica\scss\_mixins.scss" />
+    <Content Include="Informatica\scss\_navbar.scss" />
+    <Content Include="Informatica\scss\_navbar_fixed.scss" />
+    <Content Include="Informatica\scss\_navbar_static.scss" />
+    <Content Include="Informatica\scss\_navbar_toggle.scss" />
+    <Content Include="Informatica\scss\_utilities.scss" />
+    <Content Include="Informatica\scss\_variables.scss" />
+    <Content Include="Informatica\scss\sb-admin.scss" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Informatica\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Informatica\vendor\font-awesome\less\animated.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\core.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\icons.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\larger.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\list.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\path.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Informatica\vendor\font-awesome\less\variables.less" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Informatica\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Adjuntos\Contratos\prueba.zip" />
+    <Content Include="Adjuntos\Mantenciones\prueba.zip" />
+    <Content Include="Adjuntos\Seguros\prueba.zip" />
+    <Content Include="Adjuntos\Transparencia\prueba.zip" />
+    <None Include="Properties\PublishProfiles\dideco.pubxml" />
+    <Content Include="README.md" />
+    <Content Include="Asistente\scss\sb-admin.scss" />
+    <Content Include="Asistente\scss\_cards.scss" />
+    <Content Include="Asistente\scss\_global.scss" />
+    <Content Include="Asistente\scss\_mixins.scss" />
+    <Content Include="Asistente\scss\_navbar.scss" />
+    <Content Include="Asistente\scss\_navbar_fixed.scss" />
+    <Content Include="Asistente\scss\_navbar_static.scss" />
+    <Content Include="Asistente\scss\_navbar_toggle.scss" />
+    <Content Include="Asistente\scss\_utilities.scss" />
+    <Content Include="Asistente\scss\_variables.scss" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Asistente\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Asistente\vendor\font-awesome\less\animated.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\core.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\icons.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\larger.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\list.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\path.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Asistente\vendor\font-awesome\less\variables.less" />
+    <Content Include="Asistente\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Asistente\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\animated.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\core.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\icons.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\larger.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\list.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\mixins.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\path.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\stacked.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\less\variables.less" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="SecreAlcaldia\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="SecreAlcaldia\scss\_cards.scss" />
+    <Content Include="SecreAlcaldia\scss\_global.scss" />
+    <Content Include="SecreAlcaldia\scss\_mixins.scss" />
+    <Content Include="SecreAlcaldia\scss\_navbar.scss" />
+    <Content Include="SecreAlcaldia\scss\_navbar_fixed.scss" />
+    <Content Include="SecreAlcaldia\scss\_navbar_static.scss" />
+    <Content Include="SecreAlcaldia\scss\_navbar_toggle.scss" />
+    <Content Include="SecreAlcaldia\scss\_utilities.scss" />
+    <Content Include="SecreAlcaldia\scss\_variables.scss" />
+    <Content Include="SecreAlcaldia\scss\sb-admin.scss" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2239/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
